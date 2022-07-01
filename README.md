@@ -5,7 +5,7 @@ Custom library of tools for working with dates in any format in Python 3.x
 
 Make sure you have generated the api token with the necessary permissions at http://my-grafana-server:3000/api/dashboards/home
 
-Import the library and declare the class
+Import the library and inicialize GrafanaApiClient class.
 
 ```python
 #!/usr/bin/env python3
@@ -61,18 +61,19 @@ For each measurement in each panel of the dashboard, return the following info:
 - Panel measurement
 
 **Exclude panels**
+
 We can exclude by the type of panel. By default, row panel is excluded.
 
 ```python
 get_dashboard_panels(dashboard_uid='xxxxxxx', exclude_panels=('row', 'text')
 ```
 
-# Important notes and features
+## Important notes and features
 - **get_dashboard_panels**: Supports only datasources type influxdb
 - **get_dashboard_panels**:If the datasource is None, it sets the default
 - **get_dashboard_panels**: If the datasource is a variable, maps the selected value of the variable
 - **get_dashboard_panels**:If a query has subqueries or has several measurements, it takes them all
 
-##Upcoming developments and features
+## Upcoming developments and features
 - **get_dashboard_panels**: Add more types of datasources
 - **get_dashboard_panels**: Add logic to work with mixed datasource types
