@@ -1,5 +1,5 @@
 # Grafana API Client
-Custom library of tools for working with dates in any format in Python 3.x
+Python 3.x client to work with the API of your Grafana server.
 
 ## How to use
 
